@@ -1,0 +1,33 @@
+
+import Home from "../Screens/Home";
+import LoginAnfi from "../Screens/LoginAnfi";
+import LoginC from "../Screens/LoginC";
+import Esquecias from "../Screens/Esquecias";
+import Cadastrar from "../Screens/Cadastrar";
+import CadPet from "../Screens/CadPet";
+import CadDono from "../Screens/CadDono";
+import Perfil from "../Screens/Perfil";
+import { createStackNavigator } from '@react-navigation/stack';
+import React from "react";
+
+
+
+
+const Stack = createStackNavigator();
+
+const MainStackNavigator = () => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name="Home" component={Home}/>
+      <Stack.Screen name="Esquecias" component={Esquecias}/>
+      <Stack.Screen name="Cadastrar" component={Cadastrar}/>
+      <Stack.Screen name="CadPet" component={CadPet}/>
+      <Stack.Screen name="CadDono" component={CadDono}/>
+      <Stack.Screen name="Perfil" component={Perfil}/>
+      <Stack.Screen name="LoginAnfi" component={LoginAnfi}/>
+      <Stack.Screen name="LoginC" component={LoginC}/>
+    </Stack.Navigator>
+  );
+}
+
+export { MainStackNavigator };
