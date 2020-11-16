@@ -2,12 +2,12 @@ import React, {useState, useEffect} from 'react';
 import {Text, View, TextInput, TouchableOpacity, KeyboardAvoidingView,} from 'react-native';
 import styles from './styles';
 import { createStackNavigator } from '@react-navigation/stack';
-import firebase from '../components/Firebase';
-import Header from '../components/Header'
+import firebase from '../../components/Firebase';
+import Header from '../../components/Header';
 
 const Stack = createStackNavigator();
 
-const Home = ({ navigation }) => {
+const Login = ({ navigation }) => {
   const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
   
@@ -69,4 +69,4 @@ const Home = ({ navigation }) => {
            </KeyboardAvoidingView>         
     )    
 }
-export default Home;
+export default login;

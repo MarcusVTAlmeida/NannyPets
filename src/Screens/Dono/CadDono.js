@@ -4,8 +4,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { color } from 'react-native-reanimated';
 import * as ImagePicker from 'expo-image-picker'
-import Header from '../components/Header'
-import firebase from '../components/Firebase';
+import Header from '../../components/Header'
+import firebase from '../../components/Firebase';
 import styles from './styles';
 
 
@@ -49,8 +49,6 @@ const CadDono = ({ navigation }) => {
     });
   }
 
-  
-
   function pushFire(){
       try{
         firebase.database().ref('/crud').push({
@@ -87,36 +85,47 @@ return;
     <KeyboardAvoidingView behavior='padding-bottom' style={styles.container } > 
      <Header/>
      <View style={styles.campos}>
-      <Text style={{color: "purple", fontSize: 28 }}>Sobre o DONO!</Text>
-      <TouchableOpacity
-      onPress={openImage}>
-         {
-        selectImg !== null ? 
-        (
-          <Image style={styles.image} 
-          source={{uri:(selectImg.localUri != null) ? selectImg.localUri : 'https://i.imgur.com/TkIrScD.png'}}
-      />
-        ) : <Image 
-        source={require('../assets/adicionarFoto.png')}
-      />
-      }
-      </TouchableOpacity>
-           
-     <TouchableOpacity
-        style={styles.botao} onPress={ () => navigation.navigate('CadPet')}
-      >
-        <Text style={styles.botaoTexto}>
-          Proximo
-          </Text>
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={styles.botao} onPress={ () => navigation.navigate('Home')}
-      >
-        <Text style={styles.botaoTexto} >
-          Voltar
-          </Text>
-      </TouchableOpacity>    
-      </View>
+      <Text style={{color: "purple", fontSize: 18 }}>Sobre o DONO!</Text>
+      <TextInput style = {styles.caixaNome}
+            placeholder = 'Nome'
+            placeholderTextColor = 'purple'
+            autoCompleteType = 'name'
+          />
+          <TextInput style = {styles.caixaTelefone}
+            placeholder = 'Telefone'
+            placeholderTextColor = 'purple'
+          />
+            <TextInput style = {styles.caixaEndereco}
+            placeholder = 'Endereço'
+            placeholderTextColor = 'purple'
+          />
+          <TextInput style = {styles.caixaCidade}
+            placeholder = 'Cidade'
+            placeholderTextColor = 'purple'
+          />
+          <TextInput style = {styles.caixaEmail}
+            placeholder = 'Email'
+            placeholderTextColor = 'purple'
+            autoCompleteType = 'email'
+          />
+           <TextInput style = {styles.caixaConfEmail}
+            placeholder = 'Confima Email'
+            placeholderTextColor = 'purple'
+            autoCompleteType = 'email'
+          />
+          <TextInput style = {styles.caixaSenha}
+            placeholder = 'Senha'
+            placeholderTextColor = 'purple'
+            autoCompleteType = 'password'
+            secureTextEntry={true}
+          />
+        
+          <TouchableOpacity
+            style={styles.botao} onPress={ () => navigation.navigate('CadPet')}
+          >
+            <Text style={styles.botaoTexto}>Proximo</Text>
+          </TouchableOpacity>  
+        </View>
       </KeyboardAvoidingView>    
       
       

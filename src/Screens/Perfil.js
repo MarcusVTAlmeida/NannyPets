@@ -3,7 +3,7 @@ import { View, Text, Button, Image, StyleSheet, TextInput, TouchableOpacity, Key
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { color } from 'react-native-reanimated';
-import localUri from "./CadDono";
+import localUri from "../Screens/Dono/CadDono";
 import * as ImagePicker from 'expo-image-picker'
 import Header from '../components/Header';
 import styles from './styles';

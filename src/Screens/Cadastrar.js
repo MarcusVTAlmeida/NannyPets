@@ -41,7 +41,6 @@ const Cadastrar = ({ navigation }) => {
   }
 
   return (
-    
     <KeyboardAvoidingView behavior='padding-bottom' style={styles.container } >
     
       <Header/>
