@@ -30,7 +30,7 @@ return;
 <KeyboardAvoidingView behavior='padding-bottom' style={styles.container } >
     <Header/>
     <View style={styles.campos}>
-        <Text style={{color: "purple", fontSize: 18 }}>Sobre seu PET!</Text>
+        <Text style={{color: "purple", fontSize: 16 }}>Sobre seu PET!</Text>
         <TouchableOpacity
           onPress={openImage}>
            {

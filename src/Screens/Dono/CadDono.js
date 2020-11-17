@@ -8,7 +8,6 @@ import Header from '../../components/Header'
 import firebase from '../../components/Firebase';
 import styles from './styles';
 
-
 const Stack = createStackNavigator();
 
 const CadDono = ({ navigation }) => {

@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
             justifyContent: 'center',
             alignItems: 'center',
             position: 'absolute', 
-            marginTop: 500
+            marginTop: 480
         },
         botaoTexto:{
             fontWeight: 'bold',

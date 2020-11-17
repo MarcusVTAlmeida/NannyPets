@@ -1,6 +1,6 @@
 
 import Login from "../../src/Screens/Login/Login";
-import Cuidador from "../Screens/Cuidador/Cuidador";
+import CadCuidador from "../Screens/Cuidador/CadCuidador";
 import LoginC from "../Screens/LoginC";
 import Esquecias from "../Screens/Esquecias";
 import Cadastrar from "../Screens/Cadastrar";
@@ -20,7 +20,7 @@ const MainStackNavigator = () => {
       <Stack.Screen name="CadPet" component={CadPet}/>
       <Stack.Screen name="CadDono" component={CadDono}/>
       <Stack.Screen name="Perfil" component={Perfil}/>
-      <Stack.Screen name="Cuidador" component={Cuidador}/>
+      <Stack.Screen name="CadCuidador" component={CadCuidador}/>
       <Stack.Screen name="LoginC" component={LoginC}/>
     </Stack.Navigator>
   );

@@ -51,16 +51,13 @@ const Login = ({ navigation }) => {
                     secureTextEntry={true}
                     onChangeText={senha => setSenha(senha)} value={senha}
                 />        
-                <TouchableOpacity style={styles.botao} onPress={loginFirebase}>                    
+                <TouchableOpacity style={styles.botaoLogin} onPress={loginFirebase}>                    
                     <Text style={styles.botaoTexto} >Login</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.botao1} onPress={ () => navigation.navigate('LoginC')}>                    
-                    <Text style={styles.botaoTexto} >Proxima</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.textCadastro} onPress={ () => navigation.navigate('Cadastrar')}>
+                <TouchableOpacity style={styles.textCadastro} onPress={ () => navigation.navigate('CadPet')}>
                 <Text style={styles.cadastro}>Cadastrar</Text>
                 </TouchableOpacity>                                
-                <TouchableOpacity style={styles.anfitriao} onPress={ () => navigation.navigate('LoginAnfi')}>
+                <TouchableOpacity style={styles.anfitriao} onPress={ () => navigation.navigate('CadCuidador')}>
                     <Text style={styles.textanfitriao}>
                         Quero ser Anfitrião
                     </Text>
@@ -69,4 +66,4 @@ const Login = ({ navigation }) => {
            </KeyboardAvoidingView>         
     )    
 }
-export default login;
+export default Login;
